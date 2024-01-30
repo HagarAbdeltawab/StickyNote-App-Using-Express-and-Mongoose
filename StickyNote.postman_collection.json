@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "155ef3c3-a9d1-4037-9912-c13a92766da5",
+		"name": "StickyNote",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31079607"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n  \"name\": \"hagar\",\n   \"email\":\"hagar11@gmail.com\",\n   \"password\": \"Hagar@1233\",\n   \"rePassword\": \"Hagar@1233\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  \"email\":\"hagar11@gmail.com\",\n   \"password\": \"Hagar@1233\"\n  \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signIn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NTlhZGI3N2RhNzM5MmEyNDRmZTExZDIiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNDY0NzYwN30.qB_nqIZK3xnU_1igtG2M2Q_Ji9ldit6gXwMzLiBxHYc"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"note1\",\n  \"desc\": \"nmndhgycu,ghbnjvcgvh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getNotes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NTlhZGI3N2RhNzM5MmEyNDRmZTExZDIiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNDY0NzYwN30.qB_nqIZK3xnU_1igtG2M2Q_Ji9ldit6gXwMzLiBxHYc"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateNote",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NTlhZGI3N2RhNzM5MmEyNDRmZTExZDIiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNDY0NzYwN30.qB_nqIZK3xnU_1igtG2M2Q_Ji9ldit6gXwMzLiBxHYc"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"note3\",\n  \"desc\": \"nmndhgycu,ghbnjvc gvh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/notes/659aebe8da7392a244fe11de",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notes",
+						"659aebe8da7392a244fe11de"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteNote",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NTlhZGI3N2RhNzM5MmEyNDRmZTExZDIiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNDY0NzYwN30.qB_nqIZK3xnU_1igtG2M2Q_Ji9ldit6gXwMzLiBxHYc"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/notes/659aebe8da7392a244fe11de",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notes",
+						"659aebe8da7392a244fe11de"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
